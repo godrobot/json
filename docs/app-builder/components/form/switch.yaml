@@ -1,0 +1,9 @@
+type: switch
+# Required: maps to table column
+columnId: ""
+# Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+label: []
+# Default value
+defaultValue: false  # true/false
+required: false  # true/false
+

@@ -1,0 +1,44 @@
+type: comment
+# Table ID
+dataSource: ""
+# Column ID for comment text
+commentColumn: ""
+# Column ID for author name
+authorColumn: ""
+# Column ID for avatar
+avatarColumn: ""
+# Column ID for parent comment
+parentColumn: ""
+# Column ID for user
+userColumn: ""
+# Column ID for date
+dateColumn: ""
+# Column ID for likes
+likesColumn: ""
+# Column ID for dislikes
+dislikesColumn: ""
+# Column ID to sort by
+sortBy: ""
+# Sort direction
+sortType: ""
+# Filter object
+filter: null
+# Limit format
+limit: ""
+# Format: "w:100%" or "w:100% de:w:60%". See [Sizing Format Documentation](../../format/styles/sizing.md)
+width: ""
+# Format: "center" or "left"
+alignment: ""
+# Format: "m:16px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+margin: ""
+# Gap between items: "gap:8px"
+itemGap: ""
+# Format: "body-medium" or "body-medium ta:body-large". See [Typography Format Documentation](../../format/styles/typography.md)
+typography: ""
+# Show like count
+showLikeCount: false  # true/false
+# Show dislike count
+showDislikeCount: false  # true/false
+# Auto approve comments
+autoApprove: false  # true/false
+

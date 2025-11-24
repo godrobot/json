@@ -1,0 +1,36 @@
+type: data-list
+# Table ID (string), simplified structure (same as data-table), or full complex object
+dataSource: ""
+# Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+text: []
+# Format: "w:100%" or "w:100% de:w:60%". See [Sizing Format Documentation](../../format/styles/sizing.md)
+width: ""
+# Format: "center" or "left"
+alignment: ""
+# Headline alignment
+headlineAlignment: ""
+# Title alignment (boolean or responsive string)
+titleAlignment: ""
+# Content alignment (boolean or responsive string)
+contentAlignment: ""
+# Format: "m:16px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+margin: ""
+# Headline margin format
+headlineMargin: ""
+# Corner radius
+cornerRadius: ""
+# Border variant: "all", "none", etc.
+borderVariant: ""
+# Variant: "stripped", "bordered", etc.
+variant: ""
+# Primary color
+color1: ""
+# Secondary color
+color2: ""
+# Typography settings
+typography:
+  # Title typography
+  title: ""
+  # Content typography
+  content: ""
+

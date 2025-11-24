@@ -1,0 +1,1 @@
+# Makyo AI JSON Documentation

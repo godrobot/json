@@ -1,0 +1,22 @@
+type: quantity
+# Table ID
+dataSource: ""
+# Column ID for the value
+valueColumn: ""
+# Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+label: []
+# Minimum value
+min: 0
+# Maximum value
+max: 100
+# Format: "m:8px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+margin: ""
+# Format: "solid:primary-40" or "adaptive". See [Color Format Documentation](../../format/styles/colors.md)
+buttonColor: ""
+# Format: "solid:primary-40" or "adaptive". See [Color Format Documentation](../../format/styles/colors.md)
+inputColor: ""
+# Actions on increase
+actionOnIncrease: []
+# Actions on decrease
+actionOnDecrease: []
+

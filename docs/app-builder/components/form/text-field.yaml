@@ -1,0 +1,29 @@
+type: text-field
+# Required: maps to table column
+columnId: ""
+# Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+label: []
+# Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+helpText: []
+# Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+prefix: []
+# Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+suffix: []
+# Default value in select format: "text:default" or "cr:columnId" or "profile:username"
+defaultValue: ""
+required: false  # true/false
+# Input type: "text", "email", "password", "tel", etc.
+inputType: ""
+# Minimum characters
+minChar: 0
+# Maximum characters
+maxChar: 0
+# Validation pattern
+pattern: ""
+# Show help text
+showHelp: false  # true/false
+# Mask password input
+passwordMask: false  # true/false
+# Show character counter
+characterCounter: false  # true/false
+

@@ -1,0 +1,32 @@
+type: circular-progress
+# Progress value
+value: 0
+# Maximum value
+maxValue: 100
+# Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+heading: []
+# Size format
+size: ""
+# Alignment format
+alignment: ""
+# Heading alignment format
+headingAlignment: ""
+# Format: "m:16px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+margin: ""
+# Heading margin format
+headingMargin: ""
+# Typography format
+typography: ""
+# Heading typography format
+headingTypography: ""
+# Label typography format
+labelTypography: ""
+# Label color
+labelColor: ""
+# Track color
+trackColor: ""
+# Active indicator color
+activeIndicatorColor: ""
+# Show value
+showValue: false  # true/false
+

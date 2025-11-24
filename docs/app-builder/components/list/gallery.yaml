@@ -1,0 +1,62 @@
+type: gallery
+# Required: Table ID
+dataSource: ""
+# Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+galleryTitle: []
+# Column ID for image
+imageColumn: ""
+# Column ID for caption
+captionColumn: ""
+# Column ID for avatar
+avatarColumn: ""
+# Column ID for like
+likeColumn: ""
+# Column ID for tag
+tagColumn: ""
+# Column ID to sort by
+sortBy: ""
+# Sort direction: "asc" | "desc"
+sortType: ""
+# Number of items to display
+limit: 0
+# Gallery layout
+layout: ""
+# Number of columns (e.g., 1, 2, 3 or "1 ta:2 de:3")
+columns: ""
+# Number of rows (e.g., 1, 2, 3 or "1 ta:2 de:3")
+rows: ""
+# Aspect ratio: "1:1", "16:9", "4:3"
+aspectRatio: ""
+# Format: "w:100%" or "w:100% de:w:60%". See [Sizing Format Documentation](../../format/styles/sizing.md)
+width: ""
+# Format: "center" or "left"
+alignment: ""
+# Title alignment
+titleAlignment: ""
+# Format: "m:16px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+margin: ""
+# Gap between items: "gap:8px"
+gap: ""
+# Image corner radius: "none", "small", "medium", "large"
+shape: ""
+# Avatar shape: "full", "medium", etc.
+avatarShape: ""
+# Typography settings
+typography:
+  # Caption typography
+  caption: ""
+  # Title typography
+  title: ""
+  # Group header typography
+  groupHeader: ""
+  # Tag typography
+  tag: ""
+# Show search bar
+showSearch: false  # true/false
+# Show filter
+showFilter: false  # true/false
+# Show add button
+showAddButton: false  # true/false
+# Show pagination
+showPagination: false  # true/false
+

@@ -1,0 +1,50 @@
+type: pricing
+# Table ID
+dataSource: ""
+# Column ID for plan name
+nameColumn: ""
+# Column ID for description
+descriptionColumn: ""
+# Column ID for monthly price
+monthlyPriceColumn: ""
+# Column ID for yearly price
+yearlyPriceColumn: ""
+# Column ID for yearly discount
+yearlyDiscountColumn: ""
+# Column ID for monthly discount
+monthlyDiscountColumn: ""
+# Column ID for badge text
+badgeTextColumn: ""
+# Column ID for button text
+buttonTextColumn: ""
+# Column ID for popular flag
+popularColumn: ""
+# Column ID for default flag
+defaultColumn: ""
+# Features table data source
+featuresSource: null
+# Format: "w:100%". See [Sizing Format Documentation](../../format/styles/sizing.md)
+width: ""
+# Format: "m:10px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+margin: ""
+# Format: "large", "medium", "small"
+gap: ""
+# Format: "table" or "card" or "table ta:card de:table"
+layout: ""
+# Format: "center" or "left"
+layoutAlignment: ""
+# Format: "monthly" or "yearly"
+billingCycle: ""
+# Format: "center" or "left"
+billingToggleAlignment: ""
+# Show badges
+showBadges: false  # true/false
+# Show billing toggle
+showBillingToggle: false  # true/false
+# Show button
+showButton: false  # true/false
+# Show popular badge
+showPopular: false  # true/false
+# Actions on plan selection
+actionOnClickSelectPlan: []
+

@@ -1,0 +1,20 @@
+type: section
+# Format: "v" or "h" or "v de:h"
+orientation: ""
+# Format: "cols:100" or "cols:50:50" or "cols:100 ta:cols:50:50"
+layout: ""
+# Format: "p:16px" or "pt:20px pb:20px" or "p:16px ta:p:32px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+padding: ""
+# Format: "m:2rem" or "mb:16px" or "m:2rem ta:m:3rem". See [Spacing Format Documentation](../../format/styles/spacing.md)
+margin: ""
+# Format: "gap:10px" or "gap:1rem" or "gap:10px ta:gap:16px"
+gap: ""
+# Format: "solid:primary-40" or "gradient:primary-40|primary-80:to-right". See [Color Format Documentation](../../format/styles/colors.md)
+background: ""
+# Format: "h:center v:start" or "h:center ta:h:start". See [Alignment Format Documentation](../../format/styles/alignments.md)
+align: ""
+# Format: "medium" or "small ta:medium de:large". See [Breakpoints Documentation](../../format/styles/breakpoints.md)
+shape: ""
+sticky: false  # true/false
+reverseOrder: false  # true/false
+

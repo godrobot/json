@@ -1,0 +1,50 @@
+type: form
+# Required: The data source table ID
+tableId: ""
+# Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+compTitle: []
+# Submit button configuration (set to null to disable)
+submitButton:
+  # Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+  label: []
+  # Button background color
+  backgroundColor: ""
+  # Button size
+  size: ""
+  # Button shape
+  shape: ""
+  # Actions to run on submit
+  actions: []
+# Format: "solid:primary-40" or "adaptive". See [Color Format Documentation](../../format/styles/colors.md)
+titleColor: ""
+# Format: "solid:primary-30" or "adaptive". See [Color Format Documentation](../../format/styles/colors.md)
+labelColor: ""
+# Corner radius for fields
+fieldShape: ""
+# Format: "w:100%" or "w:600px" or "w:100% de:w:600px". See [Sizing Format Documentation](../../format/styles/sizing.md)
+width: ""
+# Format: "center" or "left"
+alignment: ""
+# Format: "center" or "left"
+titleAlignment: ""
+# Format: "m:16px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+margin: ""
+# Format: "p:20px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+padding: ""
+# Margin between fields
+fieldMargin: ""
+# Margin for title
+titleMargin: ""
+# Typography settings
+typography:
+  # Title typography
+  title: ""
+  # Label typography
+  label: ""
+  # Input typography
+  input: ""
+  # Help text typography
+  help: ""
+# Children components (form fields) - defined in the component body structure
+children: []
+

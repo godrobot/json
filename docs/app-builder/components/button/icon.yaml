@@ -1,0 +1,23 @@
+type: icon
+# Format: Select format string. Use "icon:<icon-name>". See [Select Format Documentation](../../format/data/select.md)
+icon: ""
+# Format: Select format string. Use "icon:<icon-name>". See [Select Format Documentation](../../format/data/select.md)
+iconActive: ""
+# Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+badge: []
+# Format: Select format string. Use "icon:<icon-name>". See [Select Format Documentation](../../format/data/select.md)
+toggle: ""
+# Format: Number (e.g., 48) or responsive format string (e.g., "48px ta:56px")
+size: ""
+shape: ""
+alignment: ""
+# Format: "m:2rem" or "mb:16px" or "m:2rem ta:m:3rem". See [Spacing Format Documentation](../../format/styles/spacing.md)
+margin: ""
+# Format: "p:16px" or "pt:20px pb:20px" or "p:16px ta:p:32px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+padding: ""
+# Format: "solid:primary-40" or "gradient:primary-40|primary-80:to-right" or "adaptive". See [Color Format Documentation](../../format/styles/colors.md)
+activeColor: ""
+# Format: "solid:primary-40" or "gradient:primary-40|primary-80:to-right" or "adaptive". See [Color Format Documentation](../../format/styles/colors.md)
+inactiveColor: ""
+onClick: []
+

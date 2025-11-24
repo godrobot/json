@@ -1,0 +1,62 @@
+type: shopping-cart
+# Required: Table ID
+dataSource: ""
+# Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+cartTitle: []
+# Column ID for product name
+productNameColumn: ""
+# Column ID for product image
+productImageColumn: ""
+# Column ID for product info
+productInfoColumn: ""
+# Column ID for stock status
+productStockStatusColumn: ""
+# Column ID for product price
+productPriceColumn: ""
+# Column ID for product quantity
+productQuantityColumn: ""
+# Filter object (will be JSON stringified)
+filter: null
+# Column ID to sort by
+sortBy: ""
+# Sort direction: "asc" | "desc"
+sortType: ""
+# Format: "w:100%" or "w:100% de:w:60%". See [Sizing Format Documentation](../../format/styles/sizing.md)
+width: ""
+# Format: "center" or "left"
+alignment: ""
+# Title alignment
+titleAlignment: ""
+# Format: "m:16px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+margin: ""
+# Title margin
+titleMargin: ""
+# Background color
+backgroundColor: ""
+# Summary background color
+summaryBackgroundColor: ""
+# Primary button color
+primaryButtonColor: ""
+# Secondary button color
+secondaryButtonColor: ""
+# Corner radius
+cornerRadius: ""
+# Image radius
+imageRadius: ""
+# Button radius
+buttonRadius: ""
+# Image width format: "w:80px"
+imageWidth: ""
+# Typography settings
+typography:
+  # Title typography
+  title: ""
+  # Info typography
+  info: ""
+  # Component title typography
+  compTitle: ""
+# Allow quantity change
+allowQuantityChange: true  # true/false
+# Allow remove item
+allowRemoveItem: true  # true/false
+

@@ -1,0 +1,16 @@
+type: divider
+# Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+text: []
+# Width format
+width: ""
+# Alignment format
+alignment: ""
+# Format: "m:16px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+margin: ""
+# Format: "solid:primary-40" or "gradient:primary-40|primary-80:to-right" or "adaptive". See [Color Format Documentation](../../format/styles/colors.md)
+color: ""
+# Line thickness (string or number)
+lineThickness: ""
+# Format: "body-medium" or "body-medium ta:body-large". See [Typography Format Documentation](../../format/styles/typography.md)
+typography: ""
+

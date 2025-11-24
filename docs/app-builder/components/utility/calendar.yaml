@@ -1,0 +1,44 @@
+type: calendar
+# Table ID
+dataSource: ""
+# Column ID for event title
+titleColumn: ""
+# Column ID for start date
+startDateColumn: ""
+# Column ID for end date
+endDateColumn: ""
+# Sort direction: "asc" | "desc"
+sortType: ""
+# Limit format
+limit: ""
+# Format: "w:100%". See [Sizing Format Documentation](../../format/styles/sizing.md)
+width: ""
+# Format: "parent" or "center"
+alignment: ""
+# Format: "m:24px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+margin: ""
+# Format: "p:0px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+padding: ""
+# Background color
+backgroundColor: ""
+# Filter background color
+filterBgColor: ""
+# Filter chip color
+filterChipColor: ""
+# Format: "none", "small", "medium", "large"
+cornerRadius: ""
+# Filter corner radius
+filterCornerRadius: ""
+# Shadow elevation
+elevation: false  # true/false
+# Typography settings
+typography:
+  # Title typography
+  title: ""
+  # Content typography
+  content: ""
+# Auto fit day view
+autoFitDay: false  # true/false
+# Default view: "month", "week", "day"
+defaultView: ""
+

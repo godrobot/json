@@ -1,0 +1,24 @@
+type: slider
+# Required: maps to table column for the value
+columnId: ""
+# Optional: maps to table column for the end value (for range slider)
+endColumnId: ""
+# Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+label: []
+# Default value
+defaultValue: 0
+# Maximum value
+max: 100
+# Step value
+step: 1
+# Format: "w:100%" or "w:100% de:w:60%". See [Sizing Format Documentation](../../format/styles/sizing.md)
+width: ""
+# Format: "p:16px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+padding: ""
+# Slider thickness
+thickness: 0
+# Show tick marks
+showTickMarks: false  # true/false
+# Show min/max values
+showMinMaxValues: false  # true/false
+

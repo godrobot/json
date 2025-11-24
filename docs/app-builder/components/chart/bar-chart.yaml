@@ -1,0 +1,44 @@
+type: bar-chart
+# Table ID
+dataSource: ""
+# Column ID for X-axis
+xAxisColumn: ""
+# Column IDs for values (string or array)
+valueColumns: []
+# Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+heading: []
+# Column ID to sort by
+sortBy: ""
+# Sort direction
+sortType: ""
+# Filter object
+filter: null
+# Items per page
+itemsPerPage: 0
+# Width format
+width: ""
+# Alignment format
+alignment: ""
+# Heading alignment format
+headingAlignment: ""
+# Format: "m:16px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+margin: ""
+# Heading margin format
+headingMargin: ""
+# Typography format
+typography: ""
+# Heading typography format
+headingTypography: ""
+# Color sequence
+colorSequence: ""
+# Show legend
+legend: false  # true/false
+# Show grid
+showGrid: false  # true/false
+# Show axis
+showAxis: false  # true/false
+# Horizontal orientation
+horizontal: ""
+# Chart style
+style: ""
+

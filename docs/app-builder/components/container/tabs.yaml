@@ -1,0 +1,33 @@
+type: tabs
+# Array of tab definitions
+tabs:
+  - title: ""
+    icon: ""
+    children: []
+showIcon: true  # true/false
+showLabel: true  # true/false
+# Format: "horizontal" or "vertical" or "horizontal ta:vertical"
+orientation: ""
+# e.g., "default", "underline", "pills"
+variant: ""
+# Format: "w:100%" or "w:50%" or "w:100% de:w:50%". See [Sizing Format Documentation](../../format/styles/sizing.md)
+width: ""
+# Format: "m:16px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+margin: ""
+# Format: "p:4px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+padding: ""
+# Padding for each tab item
+itemPadding: ""
+# Padding for tab content area
+contentPadding: ""
+# Background color for tabs bar
+backgroundColor: ""
+# Corner radius
+shape: ""
+# Shadow for content area
+contentShadow: ""
+# Alignment of tabs container
+align: ""
+# Alignment of content inside tabs
+contentAlign: ""
+

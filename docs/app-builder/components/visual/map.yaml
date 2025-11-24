@@ -1,0 +1,44 @@
+type: map
+# Format: "lat,lng" e.g., "37.8199109,-122.4785598"
+coordinate: ""
+# Icon name or URL
+marker: ""
+# Map header text
+header: ""
+# Map subheader text
+subheader: ""
+# Map description text
+description: ""
+# Avatar image URL
+avatar: ""
+# Background image URL
+image: ""
+# e.g., "primary-90"
+infoBubbleColor: ""
+# e.g., "primary-90"
+markerColor: ""
+# Format: "w:100%" or "w:600px" or "w:100% de:w:600px". See [Sizing Format Documentation](../../format/styles/sizing.md)
+width: ""
+# Format: "h:400px" or "h:400px de:h:600px"
+height: ""
+# Format: "parent" or "center" or "parent de:center"
+alignment: ""
+# Format: "none" or "small" or "medium" or "large"
+shape: ""
+# Format: "m:10px" or "mt:10px mb:10px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+margin: ""
+# "near", "medium", or "far"
+zoomLevel: ""
+# Show map type control
+showMapTypeControl: false  # true/false
+# Show fullscreen control
+showFullscreenControl: false  # true/false
+# Show street view control
+showStreetViewControl: false  # true/false
+# Show zoom control
+showZoomControl: false  # true/false
+# "default", "style-1", "style-2", "style-3", "style-4"
+infoBubbleStyle: ""
+# Actions on bubble click
+onBubbleClickAction: []
+

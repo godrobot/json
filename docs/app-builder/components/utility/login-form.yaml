@@ -1,0 +1,32 @@
+type: login-form
+# Format: "w:100%". See [Sizing Format Documentation](../../format/styles/sizing.md)
+width: ""
+# Format: "center" or "left"
+alignment: ""
+# Format: "m:24px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+margin: ""
+# Button color variant
+buttonColorVariant: ""
+# Format: "sm" or "md" or "lg"
+buttonSize: ""
+# Format: "p:8px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+buttonPadding: ""
+# Format: "none", "small", "medium", "large"
+buttonShape: ""
+# Field corner radius
+fieldShape: ""
+# Typography settings
+typography:
+  # Title typography
+  title: ""
+# Format: "solid:primary-40" or "adaptive". See [Color Format Documentation](../../format/styles/colors.md)
+titleColor: ""
+# Format: "solid:primary-40" or "adaptive". See [Color Format Documentation](../../format/styles/colors.md)
+labelColor: ""
+# Actions on login
+actionOnLogin: []
+# Actions on logout
+actionOnLogout: []
+# Redirect after login
+redirect: false  # true/false
+

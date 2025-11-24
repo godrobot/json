@@ -1,0 +1,56 @@
+type: prompt
+# Table ID
+dataSource: ""
+# Column ID for title
+titleColumn: ""
+# Column ID for description
+descriptionColumn: ""
+# Sort direction: "asc" | "desc"
+sortType: ""
+# Format: "w:100%". See [Sizing Format Documentation](../../format/styles/sizing.md)
+width: ""
+# Format: "parent" or "center"
+alignment: ""
+# Format: "m:24px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+margin: ""
+# Format: "solid:primary-40" or "adaptive". See [Color Format Documentation](../../format/styles/colors.md)
+backgroundColor: ""
+# Format: "solid:primary-40" or "adaptive". See [Color Format Documentation](../../format/styles/colors.md)
+buttonColor: ""
+# Format: "solid:primary-40" or "adaptive". See [Color Format Documentation](../../format/styles/colors.md)
+chipColor: ""
+# Format: "solid:primary-40" or "adaptive". See [Color Format Documentation](../../format/styles/colors.md)
+placeholderColor: ""
+# Border color
+borderColor: ""
+# Border thickness
+borderThickness: 0
+# Corner radius
+cornerRadius: ""
+# Button corner radius
+buttonCornerRadius: ""
+# Shadow elevation
+elevation: false  # true/false
+# Number of default items
+numberDefaultItems: 0
+# Typography format
+typography: ""
+# Accepted file types
+acceptedFiles: []
+# Color selection enabled
+colorSelection: false  # true/false
+# File selection enabled
+fileSelection: false  # true/false
+# Font selection enabled
+fontSelection: false  # true/false
+# Max files
+maxFiles: []
+# Max file size
+maxSize:
+  unit: ""
+  value: 0
+# Actions on button click
+actionOnButtonClick: []
+# Actions on improve AI click
+actionOnImproveAiClick: []
+

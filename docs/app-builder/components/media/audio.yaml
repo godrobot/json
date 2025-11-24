@@ -1,0 +1,24 @@
+type: audio
+# Audio URL
+src: ""
+# Cover image URL
+cover: ""
+# Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+header: []
+# Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+subheader: []
+# Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+text: []
+# Format: "w:100%" or "w:300px" or "w:100% de:w:50%". See [Sizing Format Documentation](../../format/styles/sizing.md)
+width: ""
+# Format: "m:10px" or "mt:10px mb:10px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+margin: ""
+# Format: "p:10px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+padding: ""
+# Format: "h:center" or "h:start ta:h:center". See [Alignment Format Documentation](../../format/styles/alignments.md)
+align: ""
+# Format: "large" or "small ta:medium de:large". See [Breakpoints Documentation](../../format/styles/breakpoints.md)
+shape: ""
+# Format: "body-medium" or "body-medium ta:body-large". See [Typography Format Documentation](../../format/styles/typography.md)
+typography: ""
+

@@ -1,0 +1,38 @@
+type: vertical-menu
+# Table ID
+dataSource: ""
+# Format: "50" or "50 ta:0 de:50"
+maxVisibleItems: ""
+# Icon name for overflow menu
+overflowIcon: ""
+# Format: "start" or "center"
+alignment: ""
+# Format: "start" or "center"
+itemsAlignment: ""
+# Format: "m:0px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+margin: ""
+# Format: "m:20px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+titleMargin: ""
+# Format: "m:10px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+itemsMargin: ""
+# Format: "horizontal" | "vertical"
+orientation: ""
+# Format: "solid:primary-40" or "adaptive". See [Color Format Documentation](../../format/styles/colors.md)
+overflowMenuBackgroundColor: ""
+# Format: "start" or "center"
+overflowMenuDropdownAlign: ""
+# Typography settings
+typography:
+  # Title typography
+  title: ""
+  # Items typography
+  items: ""
+# Format: "solid:primary-40" or "adaptive". See [Color Format Documentation](../../format/styles/colors.md)
+titleColor: ""
+# Format: "solid:primary-40" or "adaptive". See [Color Format Documentation](../../format/styles/colors.md)
+itemsColor: ""
+# Show icons
+showIcon: false  # true/false
+# Show title
+showTitle: false  # true/false
+

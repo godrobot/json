@@ -1,0 +1,19 @@
+type: selection
+# Required: maps to table column
+columnId: ""
+# Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+label: []
+# Default value in select format: "text:option1" or "cr:columnId"
+defaultValue: ""
+# Table ID for options
+optionsSource: ""
+# Column ID for label
+optionsLabel: ""
+# Column ID for value
+optionsValue: ""
+# Column ID for icon
+optionsIcon: ""
+# Selection type: "dropdown" | "radio" | "chip" | "segmented"
+selectionType: ""
+required: false  # true/false
+

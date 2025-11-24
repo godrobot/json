@@ -1,0 +1,28 @@
+type: button
+# Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+label: []
+# Format: Select format string. Use "icon:<icon-name>". See [Select Format Documentation](../../format/data/select.md)
+icon: ""
+# Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+badge: []
+# Format: "solid:primary-40" or "gradient:primary-40|primary-80:to-right" or "adaptive". See [Color Format Documentation](../../format/styles/colors.md)
+backgroundColor: ""
+# Format: "solid:primary-40" or "gradient:primary-40|primary-80:to-right" or "adaptive". See [Color Format Documentation](../../format/styles/colors.md)
+badgeColor: ""
+# Format: "label-medium" or "label-medium ta:label-large". See [Typography Format Documentation](../../format/styles/typography.md)
+typography: ""
+# Format: "h:center" or "h:center ta:h:start". See [Alignment Format Documentation](../../format/styles/alignments.md)
+align: ""
+# Format: "p:16px" or "pt:20px pb:20px" or "p:16px ta:p:32px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+padding: ""
+# Format: "m:2rem" or "mb:16px" or "m:2rem ta:m:3rem". See [Spacing Format Documentation](../../format/styles/spacing.md)
+margin: ""
+# Format: "medium" or "small ta:medium de:large". See [Breakpoints Documentation](../../format/styles/breakpoints.md)
+shape: ""
+# Format: "md" or "sm ta:md de:lg". See [Breakpoints Documentation](../../format/styles/breakpoints.md)
+size: ""
+# Format: "w:100%" or "w:300px" or "w:100% de:w:800px". See [Sizing Format Documentation](../../format/styles/sizing.md)
+width: ""
+fullWidth: false  # true/false
+clickAction: []
+

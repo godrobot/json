@@ -1,0 +1,52 @@
+type: accordion
+# Required: Table ID
+dataSource: ""
+# Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+accordionTitle: []
+# Column ID for accordion title
+titleColumn: ""
+# Column ID for accordion content
+contentColumn: ""
+# Icon name (e.g., "expand_more")
+icon: ""
+# Expanded icon name (e.g., "expand_less")
+expandedIcon: ""
+# Column ID to sort by
+sortBy: ""
+# Sort direction: "asc" | "desc"
+sortType: ""
+# Number of items to display
+limit: 0
+# Format: "w:100%" or "w:100% de:w:60%". See [Sizing Format Documentation](../../format/styles/sizing.md)
+width: ""
+# Format: "center" or "left"
+alignment: ""
+# Title alignment
+titleAlignment: ""
+# Format: "m:16px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+margin: ""
+# Text color
+textColor: ""
+# Content color
+contentColor: ""
+# Title color
+titleColor: ""
+# Group header color
+groupHeaderColor: ""
+# Typography settings
+typography:
+  # Title typography
+  title: ""
+  # Header typography
+  header: ""
+  # Content typography
+  content: ""
+  # Group header typography
+  groupHeader: ""
+# Show search bar
+showSearch: false  # true/false
+# Show add button
+showAddButton: false  # true/false
+# Allow multiple items expanded at once
+multiExpand: false  # true/false
+

@@ -1,0 +1,32 @@
+type: newsletter
+# Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+newsletterTitle: []
+# Email input placeholder
+placeholder: ""
+# Subscribe button text
+buttonText: ""
+# Icon name or URL
+icon: ""
+# e.g., "small", "medium", "large"
+size: ""
+# Format: "w:100%" or "w:600px" or "w:100% de:w:600px". See [Sizing Format Documentation](../../format/styles/sizing.md)
+width: ""
+# Format: "m:10px" or "mt:10px mb:10px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+margin: ""
+# Format: "p:16px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+padding: ""
+# Format: "center" or "left ta:center". See [Alignment Format Documentation](../../format/styles/alignments.md)
+alignment: ""
+# Format: "center" or "left"
+titleAlignment: ""
+# e.g., "primary-90"
+borderColor: ""
+# Format: "solid:primary-40" or "gradient:primary-40|primary-80:to-right" or "adaptive". See [Color Format Documentation](../../format/styles/colors.md)
+buttonColor: ""
+# Format: "solid:primary-40" or "gradient:primary-40|primary-80:to-right" or "adaptive". See [Color Format Documentation](../../format/styles/colors.md)
+titleColor: ""
+# Format: "body-medium" or "body-medium ta:body-large". See [Typography Format Documentation](../../format/styles/typography.md)
+typography: ""
+# Actions to run on subscribe
+onSubscribeAction: []
+

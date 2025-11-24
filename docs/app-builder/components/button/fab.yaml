@@ -1,0 +1,39 @@
+type: fab
+# Primary FAB
+# Format: Select format string. Use "icon:<icon-name>". See [Select Format Documentation](../../format/data/select.md)
+primaryIcon: ""
+# Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+primaryLabel: []
+# Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+primaryBadge: []
+primaryActive: false  # true/false
+# Format: "primary-40" or "primary-40 dark:secondary-30"
+primaryColor: ""
+primaryShadow: ""
+# Format: "drop-br" or "circle ta:drop-br". Possible values: "rounded", "circle", "square", "drop-br", "drop-bl", "drop-tr", "drop-tl"
+primaryShape: ""
+# Format: "label-medium" or "label-medium ta:label-large". See [Typography Format Documentation](../../format/styles/typography.md)
+primaryTypography: ""
+primaryClickAction: []
+
+# Secondary FAB
+# Format: Select format string. Use "icon:<icon-name>". See [Select Format Documentation](../../format/data/select.md)
+secondaryIcon: ""
+# Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+secondaryLabel: []
+# Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+secondaryBadge: []
+secondaryActive: false  # true/false
+# Format: "primary-40" or "primary-40 dark:secondary-30"
+secondaryColor: ""
+secondaryShadow: ""
+# Format: "drop-br" or "circle ta:drop-br". Possible values: "rounded", "circle", "square", "drop-br", "drop-bl", "drop-tr", "drop-tl"
+secondaryShape: ""
+# Format: "label-medium" or "label-medium ta:label-large". See [Typography Format Documentation](../../format/styles/typography.md)
+secondaryTypography: ""
+secondaryClickAction: []
+
+# Shared settings
+# Format: "h:end" or "h:end ta:h:center". See [Alignment Format Documentation](../../format/styles/alignments.md)
+align: ""
+

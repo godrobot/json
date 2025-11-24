@@ -1,0 +1,34 @@
+type: linear-progress
+# Progress value
+value: 0
+# Maximum value
+maxValue: 100
+# Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+progressTitle: []
+# Width format
+width: ""
+# Height format or number
+height: ""
+# Alignment format
+alignment: ""
+# Heading alignment format
+headingAlignment: ""
+# Format: "m:16px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+margin: ""
+# Title margin format
+titleMargin: ""
+# Value margin format
+valueMargin: ""
+# Typography format
+typography: ""
+# Heading typography format
+headingTypography: ""
+# Value typography format
+valueTypography: ""
+# Track color
+trackColor: ""
+# Value color
+valueColor: ""
+# Circle color
+circleColor: ""
+

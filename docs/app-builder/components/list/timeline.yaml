@@ -1,0 +1,30 @@
+type: timeline
+# Required: Table ID
+dataSource: ""
+# Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
+timelineTitle: []
+# Column ID for timeline title
+titleColumn: ""
+# Column ID for timeline content
+contentColumn: ""
+# Column ID for timeline date
+dateColumn: ""
+# Column ID for timeline icon
+iconColumn: ""
+# Column ID to sort by
+sortBy: ""
+# Sort direction: "asc" | "desc"
+sortType: ""
+# Number of items to display
+limit: 0
+# Format: "w:100%" or "w:100% de:w:60%". See [Sizing Format Documentation](../../format/styles/sizing.md)
+width: ""
+# Format: "center" or "left"
+alignment: ""
+# Title alignment
+titleAlignment: ""
+# Format: "m:16px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+margin: ""
+# Format: "body-medium" or "body-medium ta:body-large". See [Typography Format Documentation](../../format/styles/typography.md)
+typography: ""
+
