@@ -111,6 +111,67 @@ spacing: "p:1rem mb:1rem gap:10px ta:p:2rem ta:mb:2rem ta:gap:16px de:p:3rem de:
 
 ---
 
+## Recommended Component Spacing
+
+The following table provides recommended margin values for different component types. These values ensure consistent spacing and visual hierarchy throughout your application.
+
+### Component Margin Recommendations
+
+| Component | Element | Top | Right | Bottom | Left | Format String |
+|-----------|---------|-----|-------|--------|------|---------------|
+| Text | Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Section | Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Tabs | Component Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Form | Component Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Rich Text | Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Button | Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Icon | Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Image | Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Video | Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Audio | Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| List | Component Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Cards | Component Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Gallery | Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Accordion | Component Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Locations | Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Shopping Cart | Component Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Timeline | Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Data Table | Component Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Single Row Table | Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Map | Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Divider | Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Linear Progress | Component Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Circular Progress | Component Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Pie Chart | Component | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Bar Chart | Component | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Login Form | Component Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Menu | Component Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Calendar | Component Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Prompt | Component Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Quantity | Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Pricing | Component Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Newsletter | Component Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Alert | Component Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Comments | Component Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+| Rating | Margin | 8px | 16px | 8px | 16px | `mt:8px mr:16px mb:8px ml:16px` |
+
+### Quick Reference
+
+**Standard Component Margin:**
+```typescript
+margin: "mt:8px mr:16px mb:8px ml:16px"
+```
+
+**Shorthand (when all values are the same):**
+```typescript
+// For equal top/bottom and left/right
+margin: "mt:8px mb:8px ml:16px mr:16px"
+```
+
+**Note:** These are recommended default values. You can adjust spacing based on your design requirements and use responsive breakpoints to customize spacing for different screen sizes.
+
+---
+
 ## Spacing Reference
 
 | Property | Syntax | Description |
