@@ -1,5 +1,11 @@
 type: section
-# Format: "v" or "h" or "v de:h"
+# Format: "v" | "h" | "v de:h" | "h ta:v" | "v ph:v pl:h ta:v tl:h de:v tv:h" etc. See [Orientation Format Documentation](../../format/styles/orientation.md)
+# Examples: 
+#   - "v" (vertical for all breakpoints)
+#   - "h" (horizontal for all breakpoints)
+#   - "v de:h" (vertical default, horizontal on desktop)
+#   - "h ta:v" (horizontal default, vertical on tablet)
+#   - "v pl:h ta:v tl:h de:v tv:h" (different orientation for each breakpoint)
 orientation: ""
 # Format: "cols:100" or "cols:50:50" or "cols:100 ta:cols:50:50"
 layout: ""

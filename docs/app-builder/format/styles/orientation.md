@@ -26,6 +26,14 @@ orientation: "v"
 
 Orientation can be configured differently for each [breakpoint](breakpoints.md) by prefixing with a breakpoint abbreviation.
 
+**Available breakpoint prefixes:**
+- `ph` - Phone
+- `pl` - Phone Landscape
+- `ta` - Tablet
+- `tl` - Tablet Landscape
+- `de` - Desktop
+- `tv` - TV
+
 **Syntax:**
 ```
 <value> <breakpoint>:<value> <breakpoint>:<value>
@@ -39,8 +47,20 @@ orientation: "v de:h"
 // Horizontal on mobile, vertical on tablet+
 orientation: "h ta:v"
 
-// Vertical on mobile and tablet, horizontal on desktop
-orientation: "v de:h"
+// Vertical on phone, horizontal on phone landscape and above
+orientation: "v pl:h"
+
+// Vertical on phone and tablet, horizontal on desktop and TV
+orientation: "v de:h tv:h"
+
+// Different orientation for each breakpoint
+orientation: "v pl:h ta:v tl:h de:v tv:h"
+
+// Horizontal by default, vertical on tablet landscape and desktop
+orientation: "h tl:v de:v"
+
+// Complete example with all breakpoints
+orientation: "v ph:v pl:h ta:v tl:h de:v tv:h"
 ```
 
 ---
