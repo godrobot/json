@@ -1,0 +1,396 @@
+# Section Background Documentation
+
+## Overview
+
+Section backgrounds support multiple layers that are rendered from bottom to top. Each layer can be configured independently, allowing for complex visual effects by combining colors, images, videos, patterns, overlays, effects, and masks.
+
+---
+
+## Background Layers
+
+Background layers are rendered in order from bottom to top. The layers are automatically sorted so that:
+- **Overlay** is rendered on top (last)
+- **Color** is rendered at the bottom (first)
+
+**Supported Layer Types (rendering order from top to bottom):**
+1. **Overlay** - Color overlay with opacity (rendered on top)
+2. **Mask** - Mask overlay with responsive values
+3. **Effect** - Animated effects (gradient, particles, etc.)
+4. **Video** - YouTube video or video URL background
+5. **Image** - Background image with optional parallax effect
+6. **Pattern** - Pattern overlay (circles, lines, etc.)
+7. **Color** - Base color layer (solid, gradient, or adaptive) (rendered at bottom)
+
+---
+
+## Background Format
+
+Background is specified as an array of layer strings. Each string represents one layer, making it more readable and avoiding conflicts with `|` used in adaptive colors.
+
+**Syntax:**
+```typescript
+background: string[]
+```
+
+**Simple Format (backward compatible):**
+For simple color backgrounds, use a single-item array:
+- `["solid:primary-40"]` - Single color layer
+- `["gradient:primary-40|primary-80:to-right"]` - Gradient color layer
+
+**Multiple Layers Format:**
+Each layer is a separate string in the array:
+- `["color:solid:primary-40", "image:url", "overlay:#000000:0.5"]` - Multiple layers
+
+**Examples:**
+```typescript
+// Simple solid color background
+background: ["solid:primary-40"]
+
+// Transparent background
+background: ["transparent"]
+background: ["color:transparent"]
+
+// Gradient background
+background: ["gradient:primary-40|primary-80:to-right"]
+
+// Color with image (order doesn't matter - automatically sorted)
+background: ["image:https://example.com/bg.jpg", "color:solid:primary-40"]
+
+// Color with image using variable select
+background: [
+  "image:sc:products:coverImage:5",
+  "color:solid:primary-40"
+]
+
+// Color with image and overlay (overlay first for readability, but order doesn't matter)
+background: [
+  "overlay:#000000:0.5",
+  "image:https://example.com/bg.jpg",
+  "color:gradient:primary-40|primary-80:to-right"
+]
+
+// Complex multi-layer background (ordered from top to bottom for readability)
+background: [
+  "overlay:#000000:0.3:enabled",
+  "pattern:Circle1:0.1:primary-10",
+  "image:https://example.com/bg.jpg:parallax",
+  "color:adaptive:primary-80|primary-100"
+]
+
+// Color with video
+background: [
+  "video:https://www.youtube.com/watch?v=VIDEO_ID",
+  "color:solid:primary-40"
+]
+
+// Color with video using variable select
+background: [
+  "video:cr:videoUrl",
+  "color:solid:primary-40"
+]
+
+// Color with effect
+background: [
+  "effect:gradient:#6366f1,#8b5cf6,#ec4899:#000000:100:100",
+  "color:solid:#000000"
+]
+```
+
+---
+
+## Layer Types Reference
+
+### Color Layer
+
+Base color layer supporting solid colors, gradients, adaptive colors, and transparent backgrounds.
+
+**Format:** `color:<color-format>` or `<color-format>` (simple format)
+
+**Color Formats:**
+- `solid:<color>` - Solid color (e.g., `solid:primary-40`)
+- `gradient:<color1>|<color2>:<direction>` - Gradient (e.g., `gradient:primary-40|primary-80:to-right`)
+- `adaptive:<light-color> <dark-color>` - Adaptive color for light/dark modes (e.g., `adaptive:primary-40 primary-80`)
+- `transparent` - Transparent background (no color)
+
+**Examples:**
+```typescript
+// Solid color
+color:solid:primary-40
+solid:primary-40
+
+// Gradient
+color:gradient:primary-40|primary-80:to-right
+gradient:primary-40|primary-80:to-right
+
+// Adaptive color
+color:adaptive:primary-40 primary-80
+adaptive:primary-40 primary-80
+
+// Transparent background
+color:transparent
+transparent
+```
+
+See [Color Format Documentation](./colors.md) for full color format details.
+
+---
+
+### Image Layer
+
+Background image with optional parallax scrolling effect and animation types. Supports variable select format for dynamic image sources.
+
+**Format:** `image:<url>` or `image:<url>:parallax` or `image:<variable-select>`
+
+**Parameters:**
+- `url` - Image URL or variable select format (see [Variable Select Documentation](../data/select.md))
+  - Simple URLs default to `image:` format (flag 128 - Image)
+  - Variable select formats: `sc:table:col:row`, `cr:title`, `text:value`, `pc`, etc.
+- `parallax` (optional) - Enable parallax effect (`parallax` or `true`)
+
+**Animation Types** (configured via JSON settings):
+- `none` - No animation (default)
+- `parallax` - Parallax scrolling effect
+- `ken-burns` - Ken Burns zoom effect
+- `fade` - Fade animation
+- `zoom` - Zoom animation
+- `pan` - Pan animation
+
+**Note:** Animation types (`animationType`, `animationSpeed`, `animationDuration`) are configured through the component settings JSON, not through the format string.
+
+**Examples:**
+```typescript
+// Simple URL (defaults to image: format, flag 128)
+image:https://example.com/image.jpg
+image:https://example.com/image.jpg:parallax
+
+// Variable select formats
+image:text:https://example.com/image.jpg
+image:sc:products:imageUrl:5
+image:cr:coverImage
+image:pc  // Page cover
+```
+
+---
+
+### Video Layer
+
+YouTube video or video URL background. Supports variable select format for dynamic video sources.
+
+**Format:** `video:<url>` or `video:<url>:loop:muted` or `video:<variable-select>`
+
+**Parameters:**
+- `url` - Video URL or variable select format (see [Variable Select Documentation](../data/select.md))
+  - Simple URLs default to `text:` format (flag 2048 - CustomText)
+  - Variable select formats: `sc:table:col:row`, `cr:title`, `text:value`, etc.
+- `loop` (optional) - Enable looping (`loop` or `true`, default: `true`)
+- `muted` (optional) - Mute video (`muted` or `true`, default: `true`)
+
+**Examples:**
+```typescript
+// Simple URL (defaults to text: format, flag 2048)
+video:https://www.youtube.com/watch?v=VIDEO_ID
+video:https://example.com/video.mp4:loop:muted
+
+// Variable select formats
+video:text:https://www.youtube.com/watch?v=VIDEO_ID
+video:sc:videos:videoUrl:3
+video:cr:videoLink
+```
+
+---
+
+### Overlay Layer
+
+Color overlay with opacity, typically used to darken or tint backgrounds.
+
+**Format:** `overlay:<color>:<opacity>` or `overlay:<color>:<opacity>:enabled`
+
+**Parameters:**
+- `color` - Overlay color (hex format, e.g., `#000000`)
+- `opacity` - Opacity value (0.0 to 1.0)
+- `enabled` (optional) - Enable overlay (`enabled` or `true`, default: `true`)
+
+**Examples:**
+```typescript
+overlay:#000000:0.5
+overlay:#000000:0.5:enabled
+overlay:#FF0000:0.3
+```
+
+---
+
+### Pattern Layer
+
+Pattern overlay (circles, lines, etc.) with opacity and color.
+
+**Format:** `pattern:<type>:<opacity>:<color>`
+
+**Parameters:**
+- `type` - Pattern type (e.g., `Circle1`, `Lines`, etc.)
+- `opacity` - Pattern opacity (0.0 to 1.0)
+- `color` - Pattern color (color variant, e.g., `primary-10`)
+
+**Examples:**
+```typescript
+pattern:Circle1:0.1:primary-10
+pattern:Lines:0.2:neutral-20
+```
+
+---
+
+### Effect Layer
+
+Animated background effects (gradient animations, particles, etc.).
+
+**Format:** `effect:<type>:<colors>:<bgColor>:<speed>:<opacity>`
+
+**Parameters:**
+- `type` - Effect type (see available types below)
+- `colors` - Comma-separated list of colors (hex format, e.g., `#6366f1,#8b5cf6,#ec4899`)
+- `bgColor` - Background color (hex format, e.g., `#000000`)
+- `speed` - Animation speed (0-200, optional, default: `100`)
+- `opacity` - Effect opacity (0-100, optional, default: `100`)
+
+**Available Effect Types:**
+- `none` - No effect (default)
+- `gradient` - Static gradient
+- `animated-gradient` - Animated gradient
+- `beams` - Beam effects
+- `wavy` - Wavy animation
+- `sparkles` - Sparkle particles
+- `flicker-grid` - Flickering grid
+- `meteors` - Meteor shower
+- `stars` - Starfield
+- `boxes` - Animated boxes
+- `aurora` - Aurora effect
+- `paths` - Animated paths
+- `fluid-gradient` - Fluid gradient animation
+- `shader-clouds` - Shader-based clouds
+- `orbs` - Orb particles
+- `dot-matrix` - Dot matrix pattern
+- `spotlight` - Spotlight effect
+- `noise` - Noise texture
+- `mesh-gradient` - Mesh gradient
+- `ripple-waves` - Ripple waves
+- `floating-bubbles` - Floating bubbles
+- `neural-network` - Neural network visualization
+- `matrix-rain` - Matrix rain effect
+- `particles-flow` - Particle flow
+
+**Examples:**
+```typescript
+// Gradient effect
+effect:gradient:#6366f1,#8b5cf6,#ec4899:#000000:100:100
+
+// Animated gradient
+effect:animated-gradient:#6366f1,#8b5cf6,#ec4899:#000000:150:80
+
+// Particle effects
+effect:sparkles:#FFFFFF:#000000:50:80
+effect:meteors:#FF6B6B:#1A1A2E:75:90
+
+// Advanced effects
+effect:aurora:#00D4FF,#FF00FF:#000000:100:100
+effect:fluid-gradient:#6366f1,#8b5cf6,#ec4899:#0A0A0A:120:85
+```
+
+---
+
+### Mask Layer
+
+Mask overlay with responsive values. Note: Full responsive mask configuration is complex and may require direct JSON configuration.
+
+**Format:** `mask:<type>:<opacity>` (simplified)
+
+**Parameters:**
+- `type` - Mask type (e.g., `#` for hash pattern, SVG path for custom masks)
+- `opacity` - Mask opacity (0.0 to 1.0)
+
+**Examples:**
+```typescript
+mask:#:0.75
+mask:/mask/waves.svg:0.5
+```
+
+**Note:** For full responsive mask configuration with different values per breakpoint, you may need to configure the background directly in JSON format.
+
+---
+
+## Layer Rendering Order
+
+Layers are rendered from bottom to top in the order they appear in the format string:
+
+```
+Bottom Layer (rendered first)
+  ↓
+  ↓
+Top Layer (rendered last)
+```
+
+**Example:**
+```typescript
+background: "color:solid:primary-40|image:url|overlay:#000:0.5"
+```
+
+Rendering order:
+1. Color layer (bottom)
+2. Image layer (middle)
+3. Overlay layer (top)
+
+---
+
+## Complete Examples
+
+```typescript
+// Simple solid color background
+background: ["solid:primary-40"]
+
+// Gradient background
+background: ["gradient:primary-40|primary-80:to-right"]
+
+// Color with image (order doesn't matter - automatically sorted)
+background: ["image:https://example.com/bg.jpg", "color:solid:primary-40"]
+
+// Color with image using variable select
+background: ["image:cr:coverImage", "color:solid:primary-40"]
+
+// Complex multi-layer background (ordered from top to bottom for readability)
+background: [
+  "overlay:#000000:0.3:enabled",
+  "pattern:Circle1:0.1:primary-10",
+  "image:https://example.com/bg.jpg",
+  "color:gradient:primary-40|primary-80:to-right"
+]
+
+// Video background with overlay
+background: [
+  "overlay:#000000:0.4",
+  "video:https://www.youtube.com/watch?v=VIDEO_ID",
+  "color:solid:#000000"
+]
+
+// Video background with variable select
+background: [
+  "overlay:#000000:0.4",
+  "video:sc:videos:youtubeUrl:2",
+  "color:solid:#000000"
+]
+
+// Effect background
+background: [
+  "effect:gradient:#6366f1,#8b5cf6,#ec4899:#000000:100:100",
+  "color:solid:#000000"
+]
+```
+
+---
+
+## Notes
+
+- Layer IDs are automatically assigned based on the order in the format string
+- Lower IDs are rendered first (underneath)
+- Higher IDs are rendered on top
+- If a layer type doesn't exist in the template, it will be skipped
+- Simple color format (without `color:` prefix) is backward compatible and only affects the color layer
+- For complex responsive configurations (especially masks), consider using direct JSON configuration
+

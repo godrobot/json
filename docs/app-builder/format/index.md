@@ -23,6 +23,7 @@ This folder contains documentation for the app-builder format system, designed t
 - [Layout](styles/layout.md)
 - [Orientation](styles/orientation.md)
 - [Patterns](styles/patterns.md)
+- [Section Background](styles/section-background.md)
 - [Section Variant](styles/section-variant.md)
 - [Shadows](styles/shadows.md)
 - [Sizing](styles/sizing.md)

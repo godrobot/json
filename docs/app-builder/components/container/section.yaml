@@ -15,8 +15,13 @@ padding: ""
 margin: ""
 # Format: "gap:10px" or "gap:1rem" or "gap:10px ta:gap:16px"
 gap: ""
-# Format: "solid:primary-40" or "gradient:primary-40|primary-80:to-right". See [Color Format Documentation](../../format/styles/colors.md)
-background: ""
+# Format: Array of layer strings. See [Section Background Documentation](../../format/styles/section-background.md)
+# Examples:
+#   - ["solid:primary-40"] (simple color)
+#   - ["color:adaptive:primary-80|primary-100", "image:https://example.com/bg.jpg"] (multiple layers)
+#   - ["effect:animated-gradient:#6366f1,#8b5cf6:#000000:100:100", "overlay:#000000:0.3"]
+# Note: Image animation types (animationType, animationSpeed, animationDuration) are configured via JSON settings, not format strings
+background: []
 # Format: "h:center v:start" or "h:center ta:h:start". See [Alignment Format Documentation](../../format/styles/alignments.md)
 align: ""
 # Format: "medium" or "small ta:medium de:large". See [Breakpoints Documentation](../../format/styles/breakpoints.md)
