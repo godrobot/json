@@ -2,17 +2,17 @@
 
 ## Overview
 
-Section backgrounds support multiple layers that are rendered from bottom to top. Each layer can be configured independently, allowing for complex visual effects by combining colors, images, videos, patterns, overlays, effects, and masks.
+Section backgrounds support multiple layers that are rendered visually from bottom to top. Each layer can be configured independently, allowing for complex visual effects by combining colors, images, videos, patterns, overlays, effects, and masks.
 
 ---
 
 ## Background Layers
 
-Background layers are rendered in order from bottom to top. The layers are automatically sorted so that:
-- **Overlay** is rendered on top (last)
-- **Color** is rendered at the bottom (first)
+Background layers are specified in the array from top to bottom (first item = top layer, last item = bottom layer). The layers are automatically sorted so that:
+- **Overlay** is rendered on top (highest priority)
+- **Color** is rendered at the bottom (lowest priority)
 
-**Supported Layer Types (rendering order from top to bottom):**
+**Supported Layer Types (priority order from top to bottom):**
 1. **Overlay** - Color overlay with opacity (rendered on top)
 2. **Mask** - Mask overlay with responsive values
 3. **Effect** - Animated effects (gradient, particles, etc.)
@@ -62,19 +62,19 @@ background: [
   "color:solid:primary-40"
 ]
 
-// Color with image and overlay (overlay first for readability, but order doesn't matter)
+// Color with image and overlay (ordered from top to bottom: overlay first, color last)
 background: [
-  "overlay:#000000:0.5",
-  "image:https://example.com/bg.jpg",
-  "color:gradient:primary-40|primary-80:to-right"
+  "overlay:#000000:0.5",                                    // Top layer
+  "image:https://example.com/bg.jpg",                       // Middle layer
+  "color:gradient:primary-40|primary-80:to-right"          // Bottom layer
 ]
 
-// Complex multi-layer background (ordered from top to bottom for readability)
+// Complex multi-layer background (ordered from top to bottom)
 background: [
-  "overlay:#000000:0.3:enabled",
-  "pattern:Circle1:0.1:primary-10",
-  "image:https://example.com/bg.jpg:parallax",
-  "color:adaptive:primary-80|primary-100"
+  "overlay:#000000:0.3:enabled",                           // Top layer
+  "pattern:Circle1:0.1:primary-10",                        // Upper middle
+  "image:https://example.com/bg.jpg:parallax",             // Lower middle
+  "color:adaptive:primary-80|primary-100"                  // Bottom layer
 ]
 
 // Color with video
@@ -318,24 +318,28 @@ mask:/mask/waves.svg:0.5
 
 ## Layer Rendering Order
 
-Layers are rendered from bottom to top in the order they appear in the format string:
+Layers are specified in the array from top to bottom (first item = top layer, last item = bottom layer). Visually, layers are rendered from bottom to top:
 
 ```
-Bottom Layer (rendered first)
+Bottom Layer (rendered first, specified last in array)
   ↓
   ↓
-Top Layer (rendered last)
+Top Layer (rendered last, specified first in array)
 ```
 
 **Example:**
 ```typescript
-background: "color:solid:primary-40|image:url|overlay:#000:0.5"
+background: [
+  "overlay:#000:0.5",      // Top layer (rendered last)
+  "image:url",              // Middle layer
+  "color:solid:primary-40"  // Bottom layer (rendered first)
+]
 ```
 
-Rendering order:
-1. Color layer (bottom)
+Visual rendering order (bottom to top):
+1. Color layer (bottom - specified last in array)
 2. Image layer (middle)
-3. Overlay layer (top)
+3. Overlay layer (top - specified first in array)
 
 ---
 
@@ -354,32 +358,32 @@ background: ["image:https://example.com/bg.jpg", "color:solid:primary-40"]
 // Color with image using variable select
 background: ["image:cr:coverImage", "color:solid:primary-40"]
 
-// Complex multi-layer background (ordered from top to bottom for readability)
+// Complex multi-layer background (ordered from top to bottom)
 background: [
-  "overlay:#000000:0.3:enabled",
-  "pattern:Circle1:0.1:primary-10",
-  "image:https://example.com/bg.jpg",
-  "color:gradient:primary-40|primary-80:to-right"
+  "overlay:#000000:0.3:enabled",                           // Top layer
+  "pattern:Circle1:0.1:primary-10",                        // Upper middle
+  "image:https://example.com/bg.jpg",                       // Lower middle
+  "color:gradient:primary-40|primary-80:to-right"          // Bottom layer
 ]
 
-// Video background with overlay
+// Video background with overlay (ordered from top to bottom)
 background: [
-  "overlay:#000000:0.4",
-  "video:https://www.youtube.com/watch?v=VIDEO_ID",
-  "color:solid:#000000"
+  "overlay:#000000:0.4",                                    // Top layer
+  "video:https://www.youtube.com/watch?v=VIDEO_ID",         // Middle layer
+  "color:solid:#000000"                                     // Bottom layer
 ]
 
-// Video background with variable select
+// Video background with variable select (ordered from top to bottom)
 background: [
-  "overlay:#000000:0.4",
-  "video:sc:videos:youtubeUrl:2",
-  "color:solid:#000000"
+  "overlay:#000000:0.4",                                    // Top layer
+  "video:sc:videos:youtubeUrl:2",                           // Middle layer
+  "color:solid:#000000"                                     // Bottom layer
 ]
 
-// Effect background
+// Effect background (ordered from top to bottom)
 background: [
-  "effect:gradient:#6366f1,#8b5cf6,#ec4899:#000000:100:100",
-  "color:solid:#000000"
+  "effect:gradient:#6366f1,#8b5cf6,#ec4899:#000000:100:100", // Top layer
+  "color:solid:#000000"                                      // Bottom layer
 ]
 ```
 
@@ -387,7 +391,9 @@ background: [
 
 ## Notes
 
-- Layer IDs are automatically assigned based on the order in the format string
+- Layers are specified in the array from top to bottom (first item = top layer, last item = bottom layer)
+- Layers are automatically sorted by type priority (overlay on top, color at bottom)
+- Layer IDs are automatically assigned based on the sorted order
 - Lower IDs are rendered first (underneath)
 - Higher IDs are rendered on top
 - If a layer type doesn't exist in the template, it will be skipped

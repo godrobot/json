@@ -1,20 +1,4 @@
 type: section
-# Format: "v" | "h" | "v de:h" | "h ta:v" | "v ph:v pl:h ta:v tl:h de:v tv:h" etc. See [Orientation Format Documentation](../../format/styles/orientation.md)
-# Examples:
-#   - "v" (vertical for all breakpoints)
-#   - "h" (horizontal for all breakpoints)
-#   - "v de:h" (vertical default, horizontal on desktop)
-#   - "h ta:v" (horizontal default, vertical on tablet)
-#   - "v pl:h ta:v tl:h de:v tv:h" (different orientation for each breakpoint)
-orientation: ""
-# Format: "cols:100" or "cols:50:50" or "cols:100 ta:cols:50:50"
-layout: ""
-# Format: "p:16px" or "pt:20px pb:20px" or "p:16px ta:p:32px". See [Spacing Format Documentation](../../format/styles/spacing.md)
-padding: ""
-# Format: "m:2rem" or "mb:16px" or "m:2rem ta:m:3rem". See [Spacing Format Documentation](../../format/styles/spacing.md)
-margin: ""
-# Format: "gap:10px" or "gap:1rem" or "gap:10px ta:gap:16px"
-gap: ""
 # Format: Array of layer strings. See [Section Background Documentation](../../format/styles/section-background.md)
 # Examples:
 #   - ["color:transparent"] (no color)
@@ -23,10 +7,26 @@ gap: ""
 #   - ["effect:animated-gradient:#6366f1,#8b5cf6:#000000:100:100", "overlay:#000000:0.3"]
 # Note: Image animation types (animationType, animationSpeed, animationDuration) are configured via JSON settings, not format strings
 background: []
+# Format: "v" | "h" | "v de:h" | "h ta:v" | "v ph:v pl:h ta:v tl:h de:v tv:h" etc. See [Orientation Format Documentation](../../format/styles/orientation.md)
+# Examples:
+#   - "v" (vertical for all breakpoints)
+#   - "h" (horizontal for all breakpoints)
+#   - "v de:h" (vertical default, horizontal on desktop)
+#   - "h ta:v" (horizontal default, vertical on tablet)
+#   - "v pl:h ta:v tl:h de:v tv:h" (different orientation for each breakpoint)
+orientation: ''
+# Format: "cols:100" or "cols:50:50" or "cols:100 ta:cols:50:50"
+layout: ''
+# Format: "p:16px" or "pt:20px pb:20px" or "p:16px ta:p:32px". See [Spacing Format Documentation](../../format/styles/spacing.md)
+padding: ''
+# Format: "m:2rem" or "mb:16px" or "m:2rem ta:m:3rem". See [Spacing Format Documentation](../../format/styles/spacing.md)
+margin: ''
+# Format: "gap:10px" or "gap:1rem" or "gap:10px ta:gap:16px"
+gap: ''
 # Format: "h:center v:start" or "h:center ta:h:start". See [Alignment Format Documentation](../../format/styles/alignments.md)
-align: ""
+align: ''
 # Format: "medium" or "small ta:medium de:large". See [Breakpoints Documentation](../../format/styles/breakpoints.md)
-shape: ""
+shape: ''
 sticky: false # true/false
 reverseOrder: false # true/false
 
