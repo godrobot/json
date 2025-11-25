@@ -25,8 +25,8 @@ margin: ''
 gap: ''
 # Format: "h:center v:start" or "h:center ta:h:start". See [Alignment Format Documentation](../../format/styles/alignments.md)
 align: ''
-# Format: "medium" or "small ta:medium de:large". See [Breakpoints Documentation](../../format/styles/breakpoints.md)
-shape: ''
+# Format: "none" or "extra-small" or "small" or "medium" or "large" or "extra-large" or "full". See [Corner Radius Format Documentation](../../format/styles/corner-radius.md)
+cornerRadius: ''
 sticky: false # true/false
 reverseOrder: false # true/false
 

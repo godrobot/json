@@ -89,13 +89,15 @@ gradient:primary-20|primary-40:to-bottom gradient:primary-80|primary-100:to-top
 
 The color needs to be designated by a string based on the type:
 
-- adaptive: `adaptive`
-- solid: `solid:primary-40` where _primary-40_ is the value of the color
-- gradient: `gradient:primary-40|primary-80:to-right` where _primary-40_ and _primary-80_ are the values of the colors, and _to-right_ is the direction of the gradient.
+- **adaptive**: `adaptive` - Automatically adjusts based on the system theme (default for many components)
+- **solid**: `solid:primary-40` where _primary-40_ is the value of the color
+- **gradient**: `gradient:primary-40|primary-80:to-right` where _primary-40_ and _primary-80_ are the values of the colors, and _to-right_ is the direction of the gradient.
 
 Light and dark mode colors can be specified by separating them with a space (` `):
 For example:
 `solid:primary-40 gradient:primary-40|primary-80:to-right` for light and dark mode respectively.
+
+**Note:** When using `adaptive`, the system automatically handles theme switching and color inversion. This is the recommended default for most components as it ensures proper contrast and readability in both light and dark themes.
 
 ### Single Mode Configuration
 

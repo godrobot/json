@@ -17,8 +17,8 @@ margin: ""
 padding: ""
 # Format: "h:center" or "h:start ta:h:center". See [Alignment Format Documentation](../../format/styles/alignments.md)
 align: ""
-# Format: "large" or "small ta:medium de:large". See [Breakpoints Documentation](../../format/styles/breakpoints.md)
-shape: ""
+# Format: "none" or "extra-small" or "small" or "medium" or "large" or "extra-large" or "full". See [Corner Radius Format Documentation](../../format/styles/corner-radius.md)
+cornerRadius: ""
 # Format: "body-medium" or "body-medium ta:body-large". See [Typography Format Documentation](../../format/styles/typography.md)
 typography: ""
 

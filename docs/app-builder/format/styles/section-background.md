@@ -44,50 +44,47 @@ Each layer is a separate string in the array:
 
 ```typescript
 // Simple solid color background
-background: ["solid:primary-40"];
+background: ['solid:primary-40']
 
 // Transparent background (No Color)
 background: ['transparent']
 background: ['color:transparent']
 
+// Empty background (no layers, uses default template layers)
+background: []
+
 // Gradient background
-background: ["gradient:primary-40|primary-80:to-right"];
+background: ['gradient:primary-40|primary-80:to-right']
 
 // Color with image (order doesn't matter - automatically sorted)
-background: ["image:https://example.com/bg.jpg", "color:solid:primary-40"];
+background: ['image:https://example.com/bg.jpg', 'color:solid:primary-40']
 
 // Color with image using variable select
-background: ["image:sc:products:coverImage:5", "color:solid:primary-40"];
+background: ['image:sc:products:coverImage:5', 'color:solid:primary-40']
 
 // Color with image and overlay (ordered from top to bottom: overlay first, color last)
 background: [
-  "overlay:#000000:0.5", // Top layer
-  "image:https://example.com/bg.jpg", // Middle layer
-  "color:gradient:primary-40|primary-80:to-right", // Bottom layer
-];
+  'overlay:#000000:0.5', // Top layer
+  'image:https://example.com/bg.jpg', // Middle layer
+  'color:gradient:primary-40|primary-80:to-right', // Bottom layer
+]
 
 // Complex multi-layer background (ordered from top to bottom)
 background: [
-  "overlay:#000000:0.3:enabled", // Top layer
-  "pattern:Circle1:0.1:primary-10", // Upper middle
-  "image:https://example.com/bg.jpg:parallax", // Lower middle
-  "color:adaptive:primary-80|primary-100", // Bottom layer
-];
+  'overlay:#000000:0.3:enabled', // Top layer
+  'pattern:Circle1:0.1:primary-10', // Upper middle
+  'image:https://example.com/bg.jpg:parallax', // Lower middle
+  'color:adaptive:primary-80|primary-100', // Bottom layer
+]
 
 // Color with video
-background: [
-  "video:https://www.youtube.com/watch?v=VIDEO_ID",
-  "color:solid:primary-40",
-];
+background: ['video:https://www.youtube.com/watch?v=VIDEO_ID', 'color:solid:primary-40']
 
 // Color with video using variable select
-background: ["video:cr:videoUrl", "color:solid:primary-40"];
+background: ['video:cr:videoUrl', 'color:solid:primary-40']
 
 // Color with effect
-background: [
-  "effect:gradient:#6366f1,#8b5cf6,#ec4899:#000000:100:100",
-  "color:solid:#000000",
-];
+background: ['effect:gradient:primary-40,secondary-60,tertiary-80:neutral-100:100:100', 'color:solid:neutral-100']
 ```
 
 ---
@@ -159,14 +156,14 @@ Background image with optional parallax scrolling effect and animation types. Su
 
 ```typescript
 // Simple URL (defaults to image: format, flag 128)
-//example.com/image.jpg
-image: https: //example.com/image.jpg:parallax
+image: //example.com/image.jpg
+https: image: //example.com/image.jpg:parallax
 
 // Variable select formats
-image: https: image: //example.com/image.jpg
-text: https: image: sc: products: imageUrl: 5;
-image: cr: coverImage;
-image: pc; // Page cover
+https: image: text: //example.com/image.jpg
+https: image: sc: products: imageUrl: 5
+image: cr: coverImage
+image: pc // Page cover
 ```
 
 ---
@@ -189,13 +186,13 @@ YouTube video or video URL background. Supports variable select format for dynam
 
 ```typescript
 // Simple URL (defaults to text: format, flag 2048)
-//www.youtube.com/watch?v=VIDEO_ID
-video: https: //example.com/video.mp4:loop:muted
+video: //www.youtube.com/watch?v=VIDEO_ID
+https: video: //example.com/video.mp4:loop:muted
 
 // Variable select formats
-video: https: video: //www.youtube.com/watch?v=VIDEO_ID
-text: https: video: sc: videos: videoUrl: 3;
-video: cr: videoLink;
+https: video: text: //www.youtube.com/watch?v=VIDEO_ID
+https: video: sc: videos: videoUrl: 3
+video: cr: videoLink
 ```
 
 ---
@@ -252,8 +249,8 @@ Animated background effects (gradient animations, particles, etc.).
 **Parameters:**
 
 - `type` - Effect type (see available types below)
-- `colors` - Comma-separated list of colors (hex format, e.g., `#6366f1,#8b5cf6,#ec4899`)
-- `bgColor` - Background color (hex format, e.g., `#000000`)
+- `colors` - Comma-separated list of color variants (ColorVariant format, e.g., `primary-40,secondary-60,tertiary-80`)
+- `bgColor` - Background color (ColorVariant format, e.g., `neutral-100`)
 - `speed` - Animation speed (0-200, optional, default: `100`)
 - `opacity` - Effect opacity (0-100, optional, default: `100`)
 
@@ -288,18 +285,18 @@ Animated background effects (gradient animations, particles, etc.).
 
 ```typescript
 // Gradient effect
-effect:gradient:#6366f1,#8b5cf6,#ec4899:#000000:100:100
+effect:gradient:primary-40,secondary-60,tertiary-80:neutral-100:100:100
 
 // Animated gradient
-effect:animated-gradient:#6366f1,#8b5cf6,#ec4899:#000000:150:80
+effect:animated-gradient:primary-40,secondary-60,tertiary-80:neutral-100:150:80
 
 // Particle effects
-effect:sparkles:#FFFFFF:#000000:50:80
-effect:meteors:#FF6B6B:#1A1A2E:75:90
+effect:sparkles:neutral-0:neutral-100:50:80
+effect:meteors:primary-40:neutral-100:75:90
 
 // Advanced effects
-effect:aurora:#00D4FF,#FF00FF:#000000:100:100
-effect:fluid-gradient:#6366f1,#8b5cf6,#ec4899:#0A0A0A:120:85
+effect:aurora:primary-20,secondary-40:neutral-100:100:100
+effect:fluid-gradient:primary-40,secondary-60,tertiary-80:neutral-95:120:85
 ```
 
 ---
@@ -341,10 +338,10 @@ Top Layer (rendered last, specified first in array)
 
 ```typescript
 background: [
-  "overlay:#000:0.5", // Top layer (rendered last)
-  "image:url", // Middle layer
-  "color:solid:primary-40", // Bottom layer (rendered first)
-];
+  'overlay:#000:0.5', // Top layer (rendered last)
+  'image:url', // Middle layer
+  'color:solid:primary-40', // Bottom layer (rendered first)
+]
 ```
 
 Visual rendering order (bottom to top):
@@ -358,45 +355,48 @@ Visual rendering order (bottom to top):
 ## Complete Examples
 
 ```typescript
+// Empty background (no layers, uses default template layers)
+background: []
+
 // Simple solid color background
-background: ["solid:primary-40"];
+background: ['solid:primary-40']
 
 // Gradient background
-background: ["gradient:primary-40|primary-80:to-right"];
+background: ['gradient:primary-40|primary-80:to-right']
 
 // Color with image (order doesn't matter - automatically sorted)
-background: ["image:https://example.com/bg.jpg", "color:solid:primary-40"];
+background: ['image:https://example.com/bg.jpg', 'color:solid:primary-40']
 
 // Color with image using variable select
-background: ["image:cr:coverImage", "color:solid:primary-40"];
+background: ['image:cr:coverImage', 'color:solid:primary-40']
 
 // Complex multi-layer background (ordered from top to bottom)
 background: [
-  "overlay:#000000:0.3:enabled", // Top layer
-  "pattern:Circle1:0.1:primary-10", // Upper middle
-  "image:https://example.com/bg.jpg", // Lower middle
-  "color:gradient:primary-40|primary-80:to-right", // Bottom layer
-];
+  'overlay:#000000:0.3:enabled', // Top layer
+  'pattern:Circle1:0.1:primary-10', // Upper middle
+  'image:https://example.com/bg.jpg', // Lower middle
+  'color:gradient:primary-40|primary-80:to-right', // Bottom layer
+]
 
 // Video background with overlay (ordered from top to bottom)
 background: [
-  "overlay:#000000:0.4", // Top layer
-  "video:https://www.youtube.com/watch?v=VIDEO_ID", // Middle layer
-  "color:solid:#000000", // Bottom layer
-];
+  'overlay:#000000:0.4', // Top layer
+  'video:https://www.youtube.com/watch?v=VIDEO_ID', // Middle layer
+  'color:solid:#000000', // Bottom layer
+]
 
 // Video background with variable select (ordered from top to bottom)
 background: [
-  "overlay:#000000:0.4", // Top layer
-  "video:sc:videos:youtubeUrl:2", // Middle layer
-  "color:solid:#000000", // Bottom layer
-];
+  'overlay:#000000:0.4', // Top layer
+  'video:sc:videos:youtubeUrl:2', // Middle layer
+  'color:solid:#000000', // Bottom layer
+]
 
 // Effect background (ordered from top to bottom)
 background: [
-  "effect:gradient:#6366f1,#8b5cf6,#ec4899:#000000:100:100", // Top layer
-  "color:solid:#000000", // Bottom layer
-];
+  'effect:gradient:primary-40,secondary-60,tertiary-80:neutral-100:100:100', // Top layer
+  'color:solid:neutral-100', // Bottom layer
+]
 ```
 
 ---

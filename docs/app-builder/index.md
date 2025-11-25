@@ -35,12 +35,14 @@ Documentation for App Builder entities - the high-level structures that make up 
 Complete reference for all format strings used in component properties:
 
 #### Data Formats
+
 - **[Text Data](format/data/text.md)** - Text content with variable references
 - **[Select Data](format/data/select.md)** - Icon, column, and profile selections
 - **[Datasource](format/data/datasource.md)** - Table data sources
 - **[Limit](format/data/limit.md)** - Pagination and limits
 
 #### Style Formats
+
 - **[Colors](format/styles/colors.md)** - Color tokens and formats (solid, gradient, adaptive)
 - **[Typography](format/styles/typography.md)** - Text typography variants
 - **[Spacing](format/styles/spacing.md)** - Margin and padding
@@ -62,25 +64,30 @@ Complete reference for all format strings used in component properties:
 Detailed YAML specifications for all available components, organized by group:
 
 #### Container Components
+
 - [Section](components/container/section.yaml) - Layout container
 - [Tabs](components/container/tabs.yaml) - Tabbed interface
 - [Form](components/container/form.yaml) - Form container
 
 #### Text Components
+
 - [Text](components/text/text.yaml) - Simple text display
 - [Rich Text](components/text/rich-text.yaml) - Markdown/HTML content
 
 #### Button Components
+
 - [Button](components/button/button.yaml) - Standard button
 - [FAB](components/button/fab.yaml) - Floating action button
 - [Icon](components/button/icon.yaml) - Icon button
 
 #### Media Components
+
 - [Image](components/media/image.yaml) - Image display
 - [Video](components/media/video.yaml) - Video player
 - [Audio](components/media/audio.yaml) - Audio player
 
 #### List Components
+
 - [List](components/list/list.yaml) - Simple list
 - [Card](components/list/card.yaml) - Card-based list
 - [Gallery](components/list/gallery.yaml) - Image gallery
@@ -89,10 +96,12 @@ Detailed YAML specifications for all available components, organized by group:
 - [Shopping Cart](components/list/shopping-cart.yaml) - Shopping cart
 
 #### Table Components
+
 - [Data Table](components/table/data-table.yaml) - Full-featured table
 - [Single Row](components/table/single-row.yaml) - Single row data list
 
 #### Form Field Components
+
 - [Text Field](components/form/text-field.yaml) - Text input
 - [Checkbox](components/form/checkbox.yaml) - Checkbox input
 - [Switch](components/form/switch.yaml) - Toggle switch
@@ -100,18 +109,22 @@ Detailed YAML specifications for all available components, organized by group:
 - [Slider](components/form/slider.yaml) - Range slider
 
 #### Visual Components
+
 - [Map](components/visual/map.yaml) - Map with markers
 - [Divider](components/visual/divider.yaml) - Divider/separator
 
 #### Progress Components
+
 - [Linear Progress](components/progress/linear-progress.yaml) - Progress bar
 - [Circular Progress](components/progress/circular-progress.yaml) - Progress indicator
 
 #### Chart Components
+
 - [Bar Chart](components/chart/bar-chart.yaml) - Bar chart
 - [Pie Chart](components/chart/pie-chart.yaml) - Pie chart
 
 #### Utility Components
+
 - [Alert](components/utility/alert.yaml) - Alert/notification
 - [Calendar](components/utility/calendar.yaml) - Calendar component
 - [Login Form](components/utility/login-form.yaml) - Login form
@@ -122,6 +135,7 @@ Detailed YAML specifications for all available components, organized by group:
 - [Vertical Menu](components/utility/vertical-menu.yaml) - Navigation menu
 
 #### Interactive Components
+
 - [Comment](components/interactive/comment.yaml) - Comment system
 - [Rating](components/interactive/rating.yaml) - Rating display/input
 
@@ -132,6 +146,7 @@ Detailed YAML specifications for all available components, organized by group:
 ### Component System
 
 Components are the building blocks of your application. Each component:
+
 - Has a specific `type` (e.g., `"button"`, `"text"`, `"section"`)
 - Can have properties specific to its type
 - Can contain nested `children` (for container components)
@@ -142,6 +157,7 @@ Components are the building blocks of your application. Each component:
 ### Format Strings
 
 Properties use format strings to define values:
+
 - **Colors:** `"solid:primary-40"`, `"gradient:primary-40|primary-80:to-right"`, `"adaptive"`
 - **Spacing:** `"p:16px"`, `"m:2rem ta:m:3rem"`
 - **Typography:** `"headline-large"`, `"body-medium ta:body-large"`
@@ -152,6 +168,7 @@ Properties use format strings to define values:
 ### Color Token System
 
 The system uses a token-based color approach:
+
 - **Palettes:** `primary`, `secondary`, `tertiary`, `neutral`
 - **Tones:** `0`, `5`, `10`, `20`, `30`, `40`, `50`, `60`, `70`, `80`, `90`, `95`, `100`
 - **Format:** `<palette>-<tone>` (e.g., `primary-40`, `neutral-95`)
@@ -162,6 +179,7 @@ The system uses a token-based color approach:
 ### Special Components
 
 Some components are "special" because they auto-generate child structures:
+
 - **Tabs** - Automatically creates `tab-item` children from a `tabs` array
 - **Form** - Automatically creates form fields and submit button from `children` array
 
@@ -205,7 +223,7 @@ Some components are "special" because they auto-generate child structures:
     {
       "type": "section",
       "padding": "p:40px",
-      "background": "solid:primary-95",
+      "background": ["color:solid:primary-95"],
       "children": [
         {
           "type": "text",
@@ -233,4 +251,3 @@ Some components are "special" because they auto-generate child structures:
 - Check component specifications: [Component Specifications](components/)
 - Review format documentation: [Format Documentation](format/index.md)
 - Understand parser workflow: [Component Parser Workflow](component-parser-workflow.md)
-

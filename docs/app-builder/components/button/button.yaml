@@ -5,9 +5,17 @@ label: []
 icon: ""
 # Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
 badge: []
-# Format: "solid:primary-40" or "gradient:primary-40|primary-80:to-right" or "adaptive". See [Color Format Documentation](../../format/styles/colors.md)
+# Format: "adaptive" (default) or "solid:primary-40" or "gradient:primary-40|primary-80:to-right". See [Color Format Documentation](../../format/styles/colors.md)
+# Examples:
+#   - "adaptive" (automatically adjusts based on theme)
+#   - "solid:primary-40" (solid color)
+#   - "gradient:primary-40|primary-80:to-right" (gradient)
 backgroundColor: ""
-# Format: "solid:primary-40" or "gradient:primary-40|primary-80:to-right" or "adaptive". See [Color Format Documentation](../../format/styles/colors.md)
+# Format: "adaptive" or "solid:primary-40" or "gradient:primary-40|primary-80:to-right". See [Color Format Documentation](../../format/styles/colors.md)
+# Examples:
+#   - "adaptive" (automatically adjusts based on theme)
+#   - "solid:primary-40" (solid color)
+#   - "gradient:primary-40|primary-80:to-right" (gradient)
 badgeColor: ""
 # Format: "label-medium" or "label-medium ta:label-large". See [Typography Format Documentation](../../format/styles/typography.md)
 typography: ""
@@ -17,8 +25,8 @@ align: ""
 padding: ""
 # Format: "m:2rem" or "mb:16px" or "m:2rem ta:m:3rem". See [Spacing Format Documentation](../../format/styles/spacing.md)
 margin: ""
-# Format: "medium" or "small ta:medium de:large". See [Breakpoints Documentation](../../format/styles/breakpoints.md)
-shape: ""
+# Format: "none" or "extra-small" or "small" or "medium" or "large" or "extra-large" or "full". See [Corner Radius Format Documentation](../../format/styles/corner-radius.md)
+cornerRadius: ""
 # Format: "md" or "sm ta:md de:lg". See [Breakpoints Documentation](../../format/styles/breakpoints.md)
 size: ""
 # Format: "w:100%" or "w:300px" or "w:100% de:w:800px". See [Sizing Format Documentation](../../format/styles/sizing.md)

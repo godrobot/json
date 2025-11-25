@@ -23,8 +23,8 @@ width: ""
 height: ""
 # Format: "parent" or "center" or "parent de:center"
 alignment: ""
-# Format: "none" or "small" or "medium" or "large"
-shape: ""
+# Format: "none" or "extra-small" or "small" or "medium" or "large" or "extra-large" or "full". See [Corner Radius Format Documentation](../../format/styles/corner-radius.md)
+cornerRadius: ""
 # Format: "m:10px" or "mt:10px mb:10px". See [Spacing Format Documentation](../../format/styles/spacing.md)
 margin: ""
 # "near", "medium", or "far"

@@ -11,8 +11,8 @@ submitButton:
   backgroundColor: ""
   # Button size
   size: ""
-  # Button shape
-  shape: ""
+  # Format: "none" or "extra-small" or "small" or "medium" or "large" or "extra-large" or "full". See [Corner Radius Format Documentation](../../format/styles/corner-radius.md)
+  cornerRadius: ""
   # Actions to run on submit
   actions: []
 # Format: "solid:primary-40" or "adaptive". See [Color Format Documentation](../../format/styles/colors.md)

@@ -9,7 +9,8 @@ badge: []
 toggle: ""
 # Format: Number (e.g., 48) or responsive format string (e.g., "48px ta:56px")
 size: ""
-shape: ""
+# Format: "none" or "extra-small" or "small" or "medium" or "large" or "extra-large" or "full". See [Corner Radius Format Documentation](../../format/styles/corner-radius.md)
+cornerRadius: ""
 alignment: ""
 # Format: "m:2rem" or "mb:16px" or "m:2rem ta:m:3rem". See [Spacing Format Documentation](../../format/styles/spacing.md)
 margin: ""

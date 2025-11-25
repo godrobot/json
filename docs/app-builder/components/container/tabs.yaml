@@ -22,8 +22,8 @@ itemPadding: ""
 contentPadding: ""
 # Background color for tabs bar
 backgroundColor: ""
-# Corner radius
-shape: ""
+# Format: "none" or "extra-small" or "small" or "medium" or "large" or "extra-large" or "full". See [Corner Radius Format Documentation](../../format/styles/corner-radius.md)
+cornerRadius: ""
 # Shadow for content area
 contentShadow: ""
 # Alignment of tabs container
