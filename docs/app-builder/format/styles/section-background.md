@@ -46,9 +46,9 @@ Each layer is a separate string in the array:
 // Simple solid color background
 background: ["solid:primary-40"];
 
-// Transparent background
-background: ["transparent"];
-background: ["color:transparent"];
+// Transparent background (No Color)
+background: ['transparent']
+background: ['color:transparent']
 
 // Gradient background
 background: ["gradient:primary-40|primary-80:to-right"];
