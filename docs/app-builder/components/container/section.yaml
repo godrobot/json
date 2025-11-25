@@ -1,6 +1,6 @@
 type: section
 # Format: "v" | "h" | "v de:h" | "h ta:v" | "v ph:v pl:h ta:v tl:h de:v tv:h" etc. See [Orientation Format Documentation](../../format/styles/orientation.md)
-# Examples: 
+# Examples:
 #   - "v" (vertical for all breakpoints)
 #   - "h" (horizontal for all breakpoints)
 #   - "v de:h" (vertical default, horizontal on desktop)
@@ -17,7 +17,8 @@ margin: ""
 gap: ""
 # Format: Array of layer strings. See [Section Background Documentation](../../format/styles/section-background.md)
 # Examples:
-#   - ["solid:primary-40"] (simple color)
+#   - ["color:transparent"] (no color)
+#   - ["color:solid:primary-40"] (simple color)
 #   - ["color:adaptive:primary-80|primary-100", "image:https://example.com/bg.jpg"] (multiple layers)
 #   - ["effect:animated-gradient:#6366f1,#8b5cf6:#000000:100:100", "overlay:#000000:0.3"]
 # Note: Image animation types (animationType, animationSpeed, animationDuration) are configured via JSON settings, not format strings
@@ -26,6 +27,6 @@ background: []
 align: ""
 # Format: "medium" or "small ta:medium de:large". See [Breakpoints Documentation](../../format/styles/breakpoints.md)
 shape: ""
-sticky: false  # true/false
-reverseOrder: false  # true/false
+sticky: false # true/false
+reverseOrder: false # true/false
 
