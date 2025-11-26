@@ -1,6 +1,6 @@
 type: form
 # Required: The data source table ID
-tableId: ""
+tableId: ''
 # Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
 compTitle: []
 # Submit button configuration (set to null to disable)
@@ -8,43 +8,42 @@ submitButton:
   # Format: Array of text format strings. See [Text Format Documentation](../../format/data/text.md)
   label: []
   # Button background color
-  backgroundColor: ""
+  backgroundColor: ''
   # Button size
-  size: ""
+  size: ''
   # Format: "none" or "extra-small" or "small" or "medium" or "large" or "extra-large" or "full". See [Corner Radius Format Documentation](../../format/styles/corner-radius.md)
-  cornerRadius: ""
+  cornerRadius: ''
   # Actions to run on submit
   actions: []
 # Format: "solid:primary-40" or "adaptive". See [Color Format Documentation](../../format/styles/colors.md)
-titleColor: ""
+titleColor: ''
 # Format: "solid:primary-30" or "adaptive". See [Color Format Documentation](../../format/styles/colors.md)
-labelColor: ""
-# Corner radius for fields
-fieldShape: ""
+labelColor: ''
+# Corner radius for fields. See [Corner Radius Format Documentation](../../format/styles/corner-radius.md)
+fieldCornerRadius: ''
 # Format: "w:100%" or "w:600px" or "w:100% de:w:600px". See [Sizing Format Documentation](../../format/styles/sizing.md)
-width: ""
+width: ''
 # Format: "center" or "left"
-alignment: ""
+alignment: ''
 # Format: "center" or "left"
-titleAlignment: ""
+titleAlignment: ''
 # Format: "m:16px". See [Spacing Format Documentation](../../format/styles/spacing.md)
-margin: ""
+margin: ''
 # Format: "p:20px". See [Spacing Format Documentation](../../format/styles/spacing.md)
-padding: ""
+padding: ''
 # Margin between fields
-fieldMargin: ""
+fieldMargin: ''
 # Margin for title
-titleMargin: ""
+titleMargin: ''
 # Typography settings
 typography:
   # Title typography
-  title: ""
+  title: ''
   # Label typography
-  label: ""
+  label: ''
   # Input typography
-  input: ""
+  input: ''
   # Help text typography
-  help: ""
+  help: ''
 # Children components (form fields) - defined in the component body structure
 children: []
-

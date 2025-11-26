@@ -37,10 +37,10 @@ titleAlignment: ""
 margin: ""
 # Gap between items: "gap:8px"
 gap: ""
-# Image corner radius: "none", "small", "medium", "large"
-shape: ""
-# Avatar shape: "full", "medium", etc.
-avatarShape: ""
+# Image corner radius: "none", "small", "medium", "large" or "extra-small", "extra-large", "full"˝
+cornerRadius: ""
+# Avatar corner radius: "none", "small", "medium", "large" or "extra-small", "extra-large", "full"
+avatarCornerRadius: ""
 # Typography settings
 typography:
   # Caption typography
