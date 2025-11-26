@@ -77,11 +77,14 @@ background: [
   'color:adaptive:primary-80|primary-100', // Bottom layer
 ]
 
-// Color with video
-background: ['video:https://www.youtube.com/watch?v=VIDEO_ID', 'color:solid:primary-40']
+// Color with video (URL defaults to text: format, flag 2048)
+background: ['video:text:https://www.youtube.com/watch?v=VIDEO_ID', 'color:solid:primary-40']
 
 // Color with video using variable select
 background: ['video:cr:videoUrl', 'color:solid:primary-40']
+
+// Color with video and flags (loop and muted)
+background: ['video:text:https://www.youtube.com/watch?v=VIDEO_ID:loop:muted', 'color:solid:primary-40']
 
 // Color with effect
 background: ['effect:gradient:primary-40,secondary-60,tertiary-80:neutral-100:100:100', 'color:solid:neutral-100']
@@ -186,13 +189,18 @@ YouTube video or video URL background. Supports variable select format for dynam
 
 ```typescript
 // Simple URL (defaults to text: format, flag 2048)
-video: //www.youtube.com/watch?v=VIDEO_ID
-https: video: //example.com/video.mp4:loop:muted
+// When formatted, URLs with flag 2048 include the "text:" prefix
+video:text:https://www.youtube.com/watch?v=VIDEO_ID
+video:text:https://example.com/video.mp4:loop:muted
 
 // Variable select formats
-https: video: text: //www.youtube.com/watch?v=VIDEO_ID
-https: video: sc: videos: videoUrl: 3
-video: cr: videoLink
+video:text:https://www.youtube.com/watch?v=VIDEO_ID:loop:muted
+video:sc:videos:videoUrl:3:loop:muted
+video:cr:videoLink:loop:muted
+
+// Note: When parsing, both formats are supported:
+//   - video:text:https://... (explicit variable select)
+//   - video:https://... (simple URL, automatically wrapped in text: format)
 ```
 
 ---
@@ -381,14 +389,14 @@ background: [
 // Video background with overlay (ordered from top to bottom)
 background: [
   'overlay:#000000:0.4', // Top layer
-  'video:https://www.youtube.com/watch?v=VIDEO_ID', // Middle layer
+  'video:text:https://www.youtube.com/watch?v=VIDEO_ID:loop:muted', // Middle layer
   'color:solid:#000000', // Bottom layer
 ]
 
 // Video background with variable select (ordered from top to bottom)
 background: [
   'overlay:#000000:0.4', // Top layer
-  'video:sc:videos:youtubeUrl:2', // Middle layer
+  'video:sc:videos:youtubeUrl:2:loop:muted', // Middle layer
   'color:solid:#000000', // Bottom layer
 ]
 
